@@ -1,0 +1,2 @@
+// FORMAT_DATE_DISPLAY = 'DD-MM-YYYY HH:mm:ss';
+// export default FORMAT_DATE_DISPLAY;

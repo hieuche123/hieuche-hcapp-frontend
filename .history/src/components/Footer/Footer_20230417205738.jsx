@@ -1,0 +1,7 @@
+const FooterPage = () => {
+    return (
+        <>
+            Footer
+        </>
+    )
+}
