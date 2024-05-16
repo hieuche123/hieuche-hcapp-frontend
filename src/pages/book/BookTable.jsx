@@ -118,7 +118,7 @@ const BookTable = () => {
                         okText='Xác nhận'
                         cancelText='Hủy'
                     >
-                        <span style={{cursor:'pointer', margin: '0 20px'}}>
+                        <span style={{cursor:'pointer'}}>
                             <DeleteTwoTone twoToneColor='#ff4d4f'/>
                         </span>    
 
@@ -156,7 +156,7 @@ const BookTable = () => {
     const renderHeader = () => {
         return (
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <span>Tab list user</span>
+                <span>Tab list book</span>
                 <span style={{display: 'flex', gap: 15}}>
                     <Button
                         icon={<ExportOutlined/>}
@@ -202,7 +202,7 @@ const BookTable = () => {
         )
     }
     
-    const handlesearch = () => {
+    const handlesearch = (query) => {
         setFilter(query);
         setCurrent(1);
     }
@@ -222,7 +222,7 @@ const BookTable = () => {
 
             <Row gutter={[20,20]} style={{margin:'28px 10px'}}>
                 <Col span={24}><InputSearch setFilter={setFilter} setSortQuery={setSortQuery} handlesearch={handlesearch}/></Col>
-                <Col span={24}>
+                <Col span={24} style={{marginTop:'-30px'}}>
                     <Table 
                         title={renderHeader}
                         loading={isLoading}

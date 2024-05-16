@@ -16,24 +16,25 @@
       background-color: white;
       padding: 26px 60px;
       border-radius: 10px;
+      h1{
+        color: rgb(77, 1, 77);
+        text-align: center;
+    }
+    
+    .button-login{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border: none;
+        background-color: rebeccapurple;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
   }
   
-  h1{
-      color: rgb(77, 1, 77);
-      text-align: center;
-  }
   
-  .button-register{
-      width: 100%;
-      height: 50px;
-      padding: 10px;
-      border: none;
-      background-color: rebeccapurple;
-      color: white;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 18px;
-      cursor: pointer;
-      margin-top: 15px;
-      margin-bottom: 30px;
-  }

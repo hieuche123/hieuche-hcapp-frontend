@@ -32,9 +32,8 @@
         height: 55px;
         width: 100%;
         color: #808089;
-        max-width: 1440px;
         margin: 0 auto;
-        line-height: 55px;
+        align-items: center;
 
         &__top {
             display: flex;
@@ -68,7 +67,6 @@
             .icon-react {
                 font-size: 30px;
                 position: relative;
-                top: 8px;
                 margin-right: 5px;
 
                 &.rotate {

@@ -55,9 +55,9 @@ const ViewDetail = (props) => {
     }
 console.log('data', dataBook)
     return (
-        <div style={{ background: '#efefef', padding: "20px 0" }}>
-            <div className='view-detail-book' style={{ maxWidth: 1440, margin: '0 auto', minHeight: "calc(100vh - 150px)" }}>
-                <div style={{ padding: "20px", background: '#fff', borderRadius: 5 }}>
+        <div style={{ background: '#efefef', padding: "20px" }}>
+            <div className='view-detail-book' style={{ maxWidth: 1140,padding: "20px 0", margin: '0 auto', minHeight: "calc(100vh - 150px)" }}>
+                <div style={{ padding: "60px 0", background: '#fff', borderRadius: 5 }}>
                     { dataBook && dataBook._id ?
                         <Row gutter={[20, 20]}>
                             <Col md={10} sm={0} xs={0}>

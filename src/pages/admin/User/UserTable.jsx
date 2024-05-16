@@ -106,7 +106,7 @@ const UserTable = (props) => {
                         okText='Xác nhận'
                         cancelText='Hủy'
                     >
-                        <span style={{cursor:'pointer', margin: '0 20px'}}>
+                        <span style={{cursor:'pointer'}}>
                             <DeleteTwoTone twoToneColor='#ff4d4f'/>
                         </span>    
 
@@ -212,7 +212,7 @@ const UserTable = (props) => {
                 <Col span={24}>
                     <InputSearch setFilter={setFilter} setSortQuery={setSortQuery} handlesearch={handlesearch}/>
                 </Col>
-                <Col span={24}>
+                <Col span={24} style={{marginTop:'-30px'}}>
                     <Table 
                         title={renderHeader}
                         loading={isLoading}
@@ -227,7 +227,7 @@ const UserTable = (props) => {
                                 showSizeChanger: true, 
                                 total: total,
                                 showTotal: (total, range) => {return (
-                                    <div>
+                                    <div >
                                         {range[0]}-{range[1]} trên {total} rows
                                     </div>
                                 )}

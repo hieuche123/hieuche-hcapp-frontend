@@ -12,14 +12,14 @@ const InputSearch = (props) => {
   const onFinish = (values) => {
     
     let query = '';
-    if(values.fullName) {
-      query += `&fullName=/${values.fullName}/i`
+    if(values.mainText) {
+      query += `&mainText=/${values.mainText}/i`
     }
-    if(values.email) {
-      query += `&email=/${values.email}/i`
+    if(values.category) {
+      query += `&category=/${values.category}/i`
     }
-    if(values.phone) {
-      query += `&phone=/${values.phone}/i`
+    if(values.author) {
+      query += `&author=/${values.author}/i`
     }
     if(query) {
       handlesearch(query);
@@ -47,8 +47,8 @@ const InputSearch = (props) => {
                   labelCol={{
                     span: 24,
                   }}
-                  name={`fullName`}
-                  label={`Name`}
+                  name={`mainText`}
+                  label={`Tên sách`}
                 >
                   <Input />
                 </Form.Item>
@@ -59,8 +59,8 @@ const InputSearch = (props) => {
                   labelCol={{
                     span: 24,
                   }}
-                  name={`email`}
-                  label={`Email`}
+                  name={`category`}
+                  label={`Thể loại`}
                 >
                   <Input />
                 </Form.Item>
@@ -71,8 +71,8 @@ const InputSearch = (props) => {
                   labelCol={{
                     span: 24,
                   }}
-                  name={`phone`}
-                  label={`Số điện thoại`}
+                  name={`author`}
+                  label={`Tác giả`}
                 >
                   <Input />
                 </Form.Item>
@@ -80,22 +80,23 @@ const InputSearch = (props) => {
 
             </Row>
     
-            <Row style={{display:'flex', justifyContent:'flex-end'}}>
-
+            <div>
                 <Form.Item
+                  style={{display:'flex', justifyContent:'flex-end'}}
                 >
-                  <Button  type='primary' htmlType="submit">
+                  <Button style={{width:'120px'}}  type='primary' htmlType="submit">
                     Submit
                   </Button>
+
                   <Button
+                    style={{width:'120px', marginLeft:'16px'}}
                     htmlType="button"
                     onClick={onReset}
-                    style={{marginLeft:'14px'}}
                   >
                     Clear
                   </Button>
                 </Form.Item>
-            </Row>    
+            </div>     
 
           </Form>
 

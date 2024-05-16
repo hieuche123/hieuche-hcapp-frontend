@@ -10,7 +10,7 @@ const Home = () => {
 
     const [listBook, setListBook] = useState([]);
     const [current, setCurrent] = useState(1);
-    const [pageSize, setPageSize] = useState(5);
+    const [pageSize, setPageSize] = useState(10);
     const [total, setTotal] = useState(0);
 
     const [isLoading, setIsLoading] = useState(false);
@@ -173,9 +173,9 @@ const Home = () => {
                 <Row gutter={[20, 20]}>
                     <Col md={4} sm={0} xs={0}>
                         <div style={{ padding: "20px", background: '#fff', borderRadius: 5 }}>
-                            <div style={{ display: 'flex', justifyContent: "space-between" }}>
+                            <div className='sidebar-icon-header' style={{ display: 'flex', justifyContent: "space-between" }}>
                                 <span> <FilterTwoTone />
-                                    <span style={{ fontWeight: 500 }}> Bộ lọc tìm kiếm</span>
+                                    <span style={{ fontWeight: 500, verticalAlign: 0 }}> Bộ lọc tìm kiếm</span>
                                 </span>
                                 <ReloadOutlined title="Reset" onClick={() => {
                                     form.resetFields();

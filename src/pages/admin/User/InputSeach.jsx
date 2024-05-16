@@ -80,22 +80,23 @@ const InputSearch = (props) => {
 
             </Row>
     
-            <Row style={{display:'flex', justifyContent:'flex-end'}}>
-
+            <div>
                 <Form.Item
+                  style={{display:'flex', justifyContent:'flex-end'}}
                 >
-                  <Button  type='primary' htmlType="submit">
+                  <Button style={{width:'120px'}}  type='primary' htmlType="submit">
                     Submit
                   </Button>
+
                   <Button
+                    style={{width:'120px', marginLeft:'16px'}}
                     htmlType="button"
                     onClick={onReset}
-                    style={{marginLeft:'14px'}}
                   >
                     Clear
                   </Button>
                 </Form.Item>
-            </Row>    
+            </div>    
 
           </Form>
 

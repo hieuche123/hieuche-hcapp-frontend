@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { callRegister } from '../../services/api';
 
 const RegisterPage = () => {
-  
+  const [form] = Form.useForm();
   const navigate = useNavigate();
   const [isSubmit, setIsSubmit] = useState(false);
 
@@ -29,27 +29,30 @@ const RegisterPage = () => {
   }
   return (
 
-    <div className="register-page" >
-      <h3 style={{textAlign: 'center'}}>Đăng ký người dùng mới</h3>
-      <Divider/>
-      <Form
-          name="basic"
-          labelCol={{
-            span: 8,
-          }}
-          wrapperCol={{
-            span: 24,
-          }}
-          style={{
-            maxWidth: 400,
-            margin: '0 auto'
-          }}
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-          autoComplete="off"
-        >
+       <div className="login">
+        <Form
+              form={form}
+              name="basic"
+              className="login-form"
+              labelCol={{
+                span: 8,
+              }}
+              wrapperCol={{
+                span: 24,
+              }}
+              style={{
+                maxWidth: 400,
+                margin: '0 auto'
+              }}
+              initialValues={{
+                remember: true,
+              }}
+              onFinish={onFinish}
+              autoComplete="off"
+      >
+              
+              <h1 style={{marginBottom:'10px'}}>Đăng ký tài khoản</h1>
+  
           <Form.Item
             labelCol={{
               span: 24,
@@ -62,8 +65,9 @@ const RegisterPage = () => {
                 message: 'Please input your fullname!',
               },
             ]}
+            
           >
-            <Input/>
+            <Input style={{height:'40px'}}/>
           </Form.Item>
 
 
@@ -79,8 +83,10 @@ const RegisterPage = () => {
                 message: 'Please input your email!',
               },
             ]}
+            
+
           >
-            <Input />
+            <Input style={{height:'40px'}} />
           </Form.Item>
 
           <Form.Item
@@ -95,8 +101,10 @@ const RegisterPage = () => {
                 message: 'Please input your password!',
               },
             ]}
+            
+
           >
-            <Input.Password />
+            <Input.Password style={{height:'40px'}} />
           </Form.Item>
 
           <Form.Item
@@ -111,8 +119,10 @@ const RegisterPage = () => {
                 message: 'Please input your phone!',
               },
             ]}
+            
+
           >
-            <Input />
+            <Input style={{height:'40px'}} />
           </Form.Item>
 
           <Form.Item
@@ -125,22 +135,30 @@ const RegisterPage = () => {
           >
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
+              
+  
+              
+  
+              <Form.Item
+                wrapperCol={{
+                  span: 24,
+                }}
+                style={{
+                }}
+                
+              >
+                <Button type="primary" className='button-register'  htmlType="Đăng nhập" loading={isSubmit}>
+                  Đăng ký
+                </Button >
 
-          <Form.Item
-            wrapperCol={{
-              offset:10,
-              span: 16,
-            }}
-          >
-            <Button type="primary" htmlType="submit" loading={isSubmit}>
-              Submit
-            </Button>
-          </Form.Item>
+              </Form.Item>
+              
+              <p style={{textAlign: 'center'}}>Bạn đã có tài khoản <a onClick={()=>{navigate('/login')}}>Đăng nhập</a></p>
         </Form>
+    </div>
 
-      <h3 style={{textAlign: 'center'}}>Bạn đã có tài khoản <button onClick={()=>{navigate('/login')}}>Đăng nhập</button></h3>
 
-  </div>
+      
   )
   
     

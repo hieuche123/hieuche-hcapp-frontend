@@ -1,9 +1,18 @@
 .homepage-container {
+    .sidebar-icon-header {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        .anticon {
+            vertical-align: 0;
+        }
+    }
     .customize-row {
         display: flex;
         flex-wrap: wrap;
         gap: 20px 10px; //gap 10px, có 5 items trên 1 row => 4*10 = 40px cần được bớt ở width. 40/5items = 8px => calc trừ đi 8px
 
+        
         .column {
             width: calc(20% - 8px);
 

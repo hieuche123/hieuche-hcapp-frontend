@@ -157,9 +157,9 @@ const itemsDropdown = [
                 <Content>
                     <Outlet/>
                 </Content>
-                <Footer style={{padding: 0}}>
+                {/* <Footer style={{padding: 0}}>
                     &copy; 2023. Made with <HeartTwoTone/>
-                </Footer>
+                </Footer> */}
             </Layout>
 
         </Layout>

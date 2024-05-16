@@ -105,7 +105,7 @@ const Header = () => {
                                 <FaReact className="rotate icon-react"/> Hieu Che Shop
                                 <VscSearchFuzzy className="icon-search"/>
                             </span>
-                            <input className="input-search" type={'text'} placeholder="Bạn tìm gì hôm nay"/>
+                            <input style={{height:36}} className="input-search" type={'text'} placeholder="Bạn tìm gì hôm nay"/>
                         </div>
                     </div>
                     <nav className="page-header__bottom">
