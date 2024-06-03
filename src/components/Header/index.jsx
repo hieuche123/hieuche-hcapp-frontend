@@ -43,6 +43,11 @@ const Header = () => {
             </label>,
             key: 'account',
         },
+
+        {
+            label: <Link to='/history'>Lịch sử đơn hàng</Link>,
+            key: 'history',
+        },
         {
             
             label: <label 

@@ -32,7 +32,7 @@ const items = [
         icon: <AppstoreOutlined/>
     },
     {
-        label: <span>Manage User</span>,
+        label: <span>Quản lý người dùng</span>,
         //key: dashboard,
         icon: <UserOutlined/>,
         children: [
@@ -41,20 +41,15 @@ const items = [
                 key: 'crud',
                 icon: <TeamOutlined/>
             },
-            {
-                label: 'File1',
-                key: 'file1',
-                icon: <TeamOutlined/>
-            },
         ]
     },
     {
-        label: <Link to='/admin/book'>Manage Book</Link>,
+        label: <Link to='/admin/book'>Quản lý sách</Link>,
         key: 'book',
         icon: <ExceptionOutlined/>
     },
     {
-        label: <Link to='/admin/order'>Manage Order</Link>,
+        label: <Link to='/admin/order'>Quản lý đơn hàng</Link>,
         key: 'order',
         icon: <DollarCircleOutlined/>
     },

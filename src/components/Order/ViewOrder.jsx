@@ -42,11 +42,6 @@ const ViewOrder = (props) => {
                             const currentBookPrice = book?.detail?.quantity
                             return (
                                 <div key={index}>
-                                    <div className="basket-module">
-                                        <label for="promo-code">Enter a promotional code</label>
-                                        <input id="promo-code" type="text" name="promo-code" maxlength="5" className="promo-code-field"/>
-                                        <button className="promo-code-cta">Apply</button>
-                                    </div>
                                     <div className="basket-labels">
                                         <ul>
                                         <li className="item item-heading">Sản phẩm</li>
@@ -61,16 +56,16 @@ const ViewOrder = (props) => {
                                             <img src={`${import.meta.env.VITE_BACKEND_URL}/images/book/${book?.detail?.thumbnail}`} alt="Placholder Image 2" className="product-frame"/>
                                         </div>
                                         <div className="product-details">
-                                            <h1><strong><span className="item-quantity">{currentBookPrice}</span> x {book?.detail?.mainText}</strong></h1>
-                                            <p><strong>Navy, Size 10</strong></p>
-                                            <p>Product Code - 232321939</p>
+                                            <h1 className="item-quantity"><strong >{currentBookPrice} x {book?.detail?.mainText}</strong></h1>
+                                            <p><strong>Tác giả: {book?.detail?.author}</strong></p>
+                                            <p>Mã sản phẩm - {book?.detail?._id}</p>
                                         </div>
                                         </div>
-                                        <div className="price">{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(currentBookPrice ?? 0)}</div>
+                                        <div className="price">{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(book?.detail?.price ?? 0)}</div>
                                         <div className="quantity">
                                             <InputNumber onChange={(value)=> {handleOnchangeInput(value, book)}} value={book?.quantity} />
                                         </div>
-                                        <div className="subtotal">{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(currentBookPrice*book?.detail?.quantity ?? 0)}</div>
+                                        <div className="subtotal">{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(book?.quantity*book?.detail?.price ?? 0)}</div>
                                         <div className="remove">
                                             <DeleteTwoTone
                                                 style={{cursor: 'pointer'}}

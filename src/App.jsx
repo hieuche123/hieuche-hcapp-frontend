@@ -27,6 +27,7 @@ import Payment from "./components/Order/Payment";
 import OrderPage from "./pages/order";
 import ResultPage from "./components/Order/Result";
 import AdminPage from "./pages/admin/Dashboard";
+import HistoryOrder from "./components/Order/HistoryOrder";
 const Layout = () => {
   const [searchTerm, setSearchTerm] = useState('');
   return (
@@ -118,7 +119,10 @@ export default function App() {
         
       ]
     },
-    
+    {
+      path: "/history",
+      element: <HistoryOrder/>,
+    },
     {
       path: "/login",
       element: <LoginPage/>,

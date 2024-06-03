@@ -66,13 +66,7 @@ button,
   float: left;
 }
 
-.price:before,
-.subtotal:before,
-.subtotal-value:before,
-.total-value:before,
-.promo-value:before {
-  content: "£";
-}
+
 
 .hide {
   display: none;
@@ -154,6 +148,11 @@ li.subtotal:before {
   width: 55%;
 }
 
+
+.item-quantity {
+  font-size: 16px;
+  text-align: start;
+}
 .price,
 .quantity,
 .subtotal {
@@ -256,16 +255,9 @@ aside {
     padding: 0.5rem 0;
   }
   
-  .subtotal-title,
-  .subtotal-value,
-  .total-title,
-  .total-value,
-  .promo-title,
-  .promo-value {
-    color: #111;
-    float: left;
-    width: 50%;
-  }
+ 
+  
+
   
   .summary-promo {
     -webkit-transition: all 0.3s ease;
